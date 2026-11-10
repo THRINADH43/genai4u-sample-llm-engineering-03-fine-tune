@@ -1,0 +1,167 @@
+{
+ "model": "prajjwal1/bert-tiny",
+ "train_seconds_cpu": 42.7,
+ "best_val_macro_f1": 0.7359,
+ "test_accuracy": 0.6935,
+ "test_macro_f1": 0.6071,
+ "test_size": 62,
+ "history": [
+  {
+   "epoch": 1,
+   "loss": 1.2131,
+   "val_macro_f1": 0.2827
+  },
+  {
+   "epoch": 2,
+   "loss": 0.7603,
+   "val_macro_f1": 0.28
+  },
+  {
+   "epoch": 3,
+   "loss": 0.3807,
+   "val_macro_f1": 0.6135
+  },
+  {
+   "epoch": 4,
+   "loss": 0.1513,
+   "val_macro_f1": 0.7325
+  },
+  {
+   "epoch": 5,
+   "loss": 0.1012,
+   "val_macro_f1": 0.6629
+  },
+  {
+   "epoch": 6,
+   "loss": 0.058,
+   "val_macro_f1": 0.7178
+  },
+  {
+   "epoch": 7,
+   "loss": 0.0369,
+   "val_macro_f1": 0.7359
+  },
+  {
+   "epoch": 8,
+   "loss": 0.0323,
+   "val_macro_f1": 0.7359
+  },
+  {
+   "epoch": 9,
+   "loss": 0.0272,
+   "val_macro_f1": 0.7359
+  },
+  {
+   "epoch": 10,
+   "loss": 0.0198,
+   "val_macro_f1": 0.7359
+  },
+  {
+   "epoch": 11,
+   "loss": 0.0195,
+   "val_macro_f1": 0.7341
+  },
+  {
+   "epoch": 12,
+   "loss": 0.0162,
+   "val_macro_f1": 0.7341
+  }
+ ],
+ "errors": [
+  {
+   "text": "Hello team, how do I change my registered phone number",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "EMI option is not showing at checkout this is the third time.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Sir, how do I change my registered phone number what should I do?",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Hi, EMI option is not showing at checkout kindly check.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, how do I change my registered phone number thanks.",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Please help, how do I change my registered phone number what should I do?",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Please help, the coupon discount was not applied kindly check.",
+   "gold": "billing",
+   "pred": "delivery"
+  },
+  {
+   "text": "Urgent: how do I change my registered phone number this is the third time.",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Hi, the coupon discount was not applied kindly check.",
+   "gold": "billing",
+   "pred": "delivery"
+  },
+  {
+   "text": "Hello team, how do I change my registered phone number thanks.",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Please help, the coupon discount was not applied this is the third time.",
+   "gold": "billing",
+   "pred": "delivery"
+  },
+  {
+   "text": "EMI option is not showing at checkout what should I do?",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: the coupon discount was not applied kindly check.",
+   "gold": "billing",
+   "pred": "delivery"
+  },
+  {
+   "text": "Please help, how do I change my registered phone number",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Please help, the coupon discount was not applied thanks.",
+   "gold": "billing",
+   "pred": "delivery"
+  },
+  {
+   "text": "How do I change my registered phone number thanks.",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Urgent: how do I change my registered phone number",
+   "gold": "account",
+   "pred": "billing"
+  },
+  {
+   "text": "Urgent: the coupon discount was not applied",
+   "gold": "billing",
+   "pred": "delivery"
+  },
+  {
+   "text": "Good morning, EMI option is not showing at checkout please help.",
+   "gold": "billing",
+   "pred": "technical"
+  }
+ ]
+}

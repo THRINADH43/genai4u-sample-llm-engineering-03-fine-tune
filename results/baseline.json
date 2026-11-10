@@ -1,0 +1,17 @@
+{
+ "model": "groq:openai/gpt-oss-20b",
+ "test_size": 62,
+ "test_accuracy": 0.9839,
+ "test_macro_f1": 0.9793,
+ "input_tokens": 6917,
+ "output_tokens": 1820,
+ "cost_usd": 0.00106,
+ "seconds": 14.2,
+ "errors": [
+  {
+   "text": "Good morning, EMI option is not showing at checkout please help.",
+   "gold": "billing",
+   "pred": "technical"
+  }
+ ]
+}

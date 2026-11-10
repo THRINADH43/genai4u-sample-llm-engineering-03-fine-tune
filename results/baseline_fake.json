@@ -1,0 +1,197 @@
+{
+ "model": "fake-keywords",
+ "test_size": 62,
+ "test_accuracy": 0.4032,
+ "test_macro_f1": 0.289,
+ "input_tokens": 0,
+ "output_tokens": 0,
+ "cost_usd": 0.0,
+ "seconds": 0.0,
+ "errors": [
+  {
+   "text": "Hello team, how do I change my registered phone number",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: how do I change my name on the profile",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "EMI option is not showing at checkout this is the third time.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, how do I change my name on the profile what should I do?",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Sir, how do I change my registered phone number what should I do?",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Sir, how do I change my name on the profile this is the third time.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, EMI option is not showing at checkout kindly check.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, how do I change my registered phone number thanks.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Good morning, I received a damaged box.",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: I received a damaged box what should I do?",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, how do I change my registered phone number what should I do?",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, the coupon discount was not applied kindly check.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: how do I change my registered phone number this is the third time.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, the coupon discount was not applied kindly check.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Hello team, how do I change my registered phone number thanks.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, the coupon discount was not applied this is the third time.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, I received a damaged box what should I do?",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "Hello team, I received a damaged box thanks.",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, how do I change my name on the profile please help.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, how do I change my name on the profile.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "EMI option is not showing at checkout what should I do?",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: the coupon discount was not applied kindly check.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, how do I change my registered phone number",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, the coupon discount was not applied thanks.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "How do I change my registered phone number thanks.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: how do I change my registered phone number",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Sir, how do I change my name on the profile what should I do?",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, I received a damaged box.",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "I received a damaged box what should I do?",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "I received a damaged box please help.",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, how do I change my name on the profile kindly check.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "How do I change my registered phone number",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Urgent: the coupon discount was not applied",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Please help, how do I change my name on the profile please help.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, I received a damaged box thanks.",
+   "gold": "delivery",
+   "pred": "technical"
+  },
+  {
+   "text": "Sir, how do I change my name on the profile thanks.",
+   "gold": "account",
+   "pred": "technical"
+  },
+  {
+   "text": "Good morning, EMI option is not showing at checkout please help.",
+   "gold": "billing",
+   "pred": "technical"
+  }
+ ]
+}
