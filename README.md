@@ -44,6 +44,8 @@ pip install -r requirements.txt
 python data/make_dataset.py          # same split every time (fixed seeds); writes data/train.json, val.json, test.json
 python finetune.py                   # results/finetune.json
 GROQ_API_KEY=... python baseline.py  # results/baseline.json (key from the environment, never committed)
+GROQ_API_KEY=... python baseline.py --zero-shot   # results/baseline_zero_shot.json
+python compare.py                    # results/summary.json: every number in the table below
 python baseline.py --fake            # no key: a keyword "model", just to try the code
 python -m unittest discover -s tests
 ```
@@ -59,8 +61,8 @@ macro-F1, and only then scores the test set once.
 | gpt-oss-20b, 8-shot prompt (Groq) | **0.952** | **0.935** | $0.00161 (15,535 in / 1,494 out tokens) | 13 s, 15 minutes of my work |
 | keyword rules (`--fake`) | 0.403 | 0.289 | $0 | - |
 
-Raw numbers: `results/finetune.json`, `results/baseline.json`, `results/baseline_fake.json`
-(each lists the wrong predictions).
+Raw numbers: `results/summary.json`, built from `results/finetune.json`, `results/baseline.json`,
+`results/baseline_zero_shot.json` and `results/baseline_fake.json` (each lists the wrong predictions).
 
 ## Was it worth it?
 
@@ -79,9 +81,11 @@ No, not for this task.
   model (for example distilbert), a need to run offline, or a very large volume where API
   cost adds up. None of these apply here.
 
-**A surprise:** an earlier zero-shot run of the same model (no examples) scored 0.984, a
-little higher than with 8 examples. With 62 test messages that difference is 2 messages, so I
-would not read much into it, but adding examples did not help here and doubled the tokens.
+**Do the examples help?** `python baseline.py --zero-shot` runs the same model with no
+examples (`results/baseline_zero_shot.json`): accuracy 0.952, the same as with 8 examples, for
+$0.00124 instead of $0.00161. On this easy task the examples add tokens without adding accuracy.
+(A first zero-shot run, with a slightly different prompt that I did not save, scored 0.984; with
+62 test messages that is 2 messages, so I treat the two as equal.)
 
 **Limits of this test:** 62 test messages is small (one message is 1.6%), and my messages are
 generated from templates, so they are cleaner than real customer messages.

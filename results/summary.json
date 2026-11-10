@@ -1,0 +1,30 @@
+{
+ "fine_tuned": {
+  "model": "prajjwal1/bert-tiny",
+  "test_size": 62,
+  "test_accuracy": 0.6935,
+  "test_macro_f1": 0.6071,
+  "train_seconds_cpu": 42.7
+ },
+ "baseline_few_shot": {
+  "model": "groq:openai/gpt-oss-20b",
+  "test_size": 62,
+  "test_accuracy": 0.9516,
+  "test_macro_f1": 0.9345,
+  "cost_usd": 0.00161
+ },
+ "baseline_zero_shot": {
+  "model": "groq:openai/gpt-oss-20b",
+  "test_size": 62,
+  "test_accuracy": 0.9516,
+  "test_macro_f1": 0.9345,
+  "cost_usd": 0.00124
+ },
+ "keyword_rules": {
+  "model": "fake-keywords",
+  "test_size": 62,
+  "test_accuracy": 0.4032,
+  "test_macro_f1": 0.289,
+  "cost_usd": 0.0
+ }
+}

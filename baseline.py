@@ -3,6 +3,7 @@ training set (few-shot), labels the same test set.
 
 GROQ_API_KEY=... python baseline.py          # real run
 python baseline.py --fake                     # keyword fake model, no key, for trying it out
+GROQ_API_KEY=... python baseline.py --zero-shot   # the same model with no examples
 The key is read from the environment and never written anywhere.
 """
 
@@ -72,11 +73,12 @@ def fake_model(text):
 
 def main():
     fake = "--fake" in sys.argv
+    zero_shot = "--zero-shot" in sys.argv  # no examples, to see whether the examples help
     key = os.environ.get("GROQ_API_KEY")
     if not fake and not key:
         sys.exit("Set GROQ_API_KEY, or run with --fake")
     test = read_rows("data/test.json")
-    examples = few_shot_examples()
+    examples = "(none)" if zero_shot else few_shot_examples()
     preds, tin, tout = [], 0, 0
     t0 = time.time()
     for r in test:
@@ -90,7 +92,8 @@ def main():
               "input_tokens": tin, "output_tokens": tout, "cost_usd": round(cost, 5),
               "seconds": round(time.time() - t0, 1),
               "errors": [{"text": r["text"], "gold": r["label"], "pred": p} for r, p in zip(test, preds) if p != r["label"]]}
-    json.dump(result, open("results/baseline_fake.json" if fake else "results/baseline.json", "w"), indent=1)
+    name = "baseline_fake" if fake else "baseline_zero_shot" if zero_shot else "baseline"
+    json.dump(result, open(f"results/{name}.json", "w"), indent=1)
     print({k: v for k, v in result.items() if k != "errors"})
 
 
