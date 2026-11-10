@@ -4,15 +4,15 @@ import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from baseline import fake_model, parse_label  # noqa: E402
-from common import accuracy, macro_f1, read_jsonl  # noqa: E402
+from common import accuracy, macro_f1, read_rows  # noqa: E402
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data")
 
 
 class DataTests(unittest.TestCase):
     def test_no_test_message_is_in_training(self):
-        train = {r["text"].lower() for r in read_jsonl(os.path.join(DATA, "train.jsonl"))}
-        test = [r["text"].lower() for r in read_jsonl(os.path.join(DATA, "test.jsonl"))]
+        train = {r["text"].lower() for r in read_rows(os.path.join(DATA, "train.json"))}
+        test = [r["text"].lower() for r in read_rows(os.path.join(DATA, "test.json"))]
         self.assertTrue(test)
         self.assertFalse(train.intersection(test))
 

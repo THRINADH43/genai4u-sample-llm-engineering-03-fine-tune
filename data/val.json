@@ -1,0 +1,242 @@
+[
+ {
+  "text": "Please help, the page keeps refreshing what should I do?",
+  "label": "technical"
+ },
+ {
+  "text": "Hi, images are not loading in the app.",
+  "label": "technical"
+ },
+ {
+  "text": "Urgent: why is there an extra fee on my bill please help.",
+  "label": "billing"
+ },
+ {
+  "text": "Hi, someone else logged into my account this is the third time.",
+  "label": "account"
+ },
+ {
+  "text": "Hello team, the amount on the bill is wrong what should I do?",
+  "label": "billing"
+ },
+ {
+  "text": "Hi, the page keeps refreshing please help.",
+  "label": "technical"
+ },
+ {
+  "text": "The page keeps refreshing what should I do?",
+  "label": "technical"
+ },
+ {
+  "text": "Urgent: tracking has not updated for days what should I do?",
+  "label": "delivery"
+ },
+ {
+  "text": "Please help, my account was locked after wrong attempts",
+  "label": "account"
+ },
+ {
+  "text": "Urgent: why is there an extra fee on my bill kindly check.",
+  "label": "billing"
+ },
+ {
+  "text": "Please help, the amount on the bill is wrong please help.",
+  "label": "billing"
+ },
+ {
+  "text": "Hello team, the amount on the bill is wrong this is the third time.",
+  "label": "billing"
+ },
+ {
+  "text": "Hi, the amount on the bill is wrong",
+  "label": "billing"
+ },
+ {
+  "text": "Sir, my account was locked after wrong attempts please help.",
+  "label": "account"
+ },
+ {
+  "text": "Good morning, the amount on the bill is wrong what should I do?",
+  "label": "billing"
+ },
+ {
+  "text": "Urgent: my account was locked after wrong attempts thanks.",
+  "label": "account"
+ },
+ {
+  "text": "Good morning, the amount on the bill is wrong this is the third time.",
+  "label": "billing"
+ },
+ {
+  "text": "Sir, images are not loading in the app",
+  "label": "technical"
+ },
+ {
+  "text": "Hi, images are not loading in the app kindly check.",
+  "label": "technical"
+ },
+ {
+  "text": "Good morning, my account was locked after wrong attempts this is the third time.",
+  "label": "account"
+ },
+ {
+  "text": "Sir, tracking has not updated for days please help.",
+  "label": "delivery"
+ },
+ {
+  "text": "Sir, my account was locked after wrong attempts.",
+  "label": "account"
+ },
+ {
+  "text": "Sir, someone else logged into my account please help.",
+  "label": "account"
+ },
+ {
+  "text": "Hello team, my account was locked after wrong attempts kindly check.",
+  "label": "account"
+ },
+ {
+  "text": "Please help, why is there an extra fee on my bill this is the third time.",
+  "label": "billing"
+ },
+ {
+  "text": "Hello team, the page keeps refreshing",
+  "label": "technical"
+ },
+ {
+  "text": "Hello team, why is there an extra fee on my bill what should I do?",
+  "label": "billing"
+ },
+ {
+  "text": "Good morning, images are not loading in the app kindly check.",
+  "label": "technical"
+ },
+ {
+  "text": "Urgent: why is there an extra fee on my bill",
+  "label": "billing"
+ },
+ {
+  "text": "Sir, the page keeps refreshing kindly check.",
+  "label": "technical"
+ },
+ {
+  "text": "Hello team, someone else logged into my account this is the third time.",
+  "label": "account"
+ },
+ {
+  "text": "Good morning, can I change the delivery date",
+  "label": "delivery"
+ },
+ {
+  "text": "Why is there an extra fee on my bill thanks.",
+  "label": "billing"
+ },
+ {
+  "text": "Hi, why is there an extra fee on my bill.",
+  "label": "billing"
+ },
+ {
+  "text": "Please help, why is there an extra fee on my bill.",
+  "label": "billing"
+ },
+ {
+  "text": "Hello team, someone else logged into my account thanks.",
+  "label": "account"
+ },
+ {
+  "text": "Good morning, why is there an extra fee on my bill",
+  "label": "billing"
+ },
+ {
+  "text": "Hello team, can I change the delivery date.",
+  "label": "delivery"
+ },
+ {
+  "text": "Why is there an extra fee on my bill.",
+  "label": "billing"
+ },
+ {
+  "text": "Hi, tracking has not updated for days this is the third time.",
+  "label": "delivery"
+ },
+ {
+  "text": "Urgent: the amount on the bill is wrong this is the third time.",
+  "label": "billing"
+ },
+ {
+  "text": "Good morning, images are not loading in the app this is the third time.",
+  "label": "technical"
+ },
+ {
+  "text": "Hello team, can I change the delivery date this is the third time.",
+  "label": "delivery"
+ },
+ {
+  "text": "Please help, someone else logged into my account thanks.",
+  "label": "account"
+ },
+ {
+  "text": "Sir, why is there an extra fee on my bill this is the third time.",
+  "label": "billing"
+ },
+ {
+  "text": "Sir, images are not loading in the app this is the third time.",
+  "label": "technical"
+ },
+ {
+  "text": "Hello team, tracking has not updated for days kindly check.",
+  "label": "delivery"
+ },
+ {
+  "text": "Urgent: tracking has not updated for days.",
+  "label": "delivery"
+ },
+ {
+  "text": "Urgent: the amount on the bill is wrong kindly check.",
+  "label": "billing"
+ },
+ {
+  "text": "Can I change the delivery date what should I do?",
+  "label": "delivery"
+ },
+ {
+  "text": "Good morning, the page keeps refreshing this is the third time.",
+  "label": "technical"
+ },
+ {
+  "text": "Tracking has not updated for days please help.",
+  "label": "delivery"
+ },
+ {
+  "text": "Hi, my account was locked after wrong attempts.",
+  "label": "account"
+ },
+ {
+  "text": "Good morning, tracking has not updated for days thanks.",
+  "label": "delivery"
+ },
+ {
+  "text": "Someone else logged into my account this is the third time.",
+  "label": "account"
+ },
+ {
+  "text": "Sir, the amount on the bill is wrong.",
+  "label": "billing"
+ },
+ {
+  "text": "Urgent: can I change the delivery date",
+  "label": "delivery"
+ },
+ {
+  "text": "Please help, why is there an extra fee on my bill what should I do?",
+  "label": "billing"
+ },
+ {
+  "text": "Good morning, images are not loading in the app what should I do?",
+  "label": "technical"
+ },
+ {
+  "text": "Urgent: can I change the delivery date kindly check.",
+  "label": "delivery"
+ }
+]

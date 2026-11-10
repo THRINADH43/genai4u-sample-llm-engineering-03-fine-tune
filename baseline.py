@@ -1,4 +1,5 @@
-"""Prompted baseline: a hosted model (Groq, openai/gpt-oss-20b) labels the same test set.
+"""Prompted baseline: a hosted model (Groq, openai/gpt-oss-20b), given 8 labelled examples from the
+training set (few-shot), labels the same test set.
 
 GROQ_API_KEY=... python baseline.py          # real run
 python baseline.py --fake                     # keyword fake model, no key, for trying it out
@@ -11,18 +12,30 @@ import sys
 import time
 import urllib.request
 
-from common import LABELS, accuracy, macro_f1, read_jsonl
+from common import LABELS, accuracy, macro_f1, read_rows
 
 MODEL = "openai/gpt-oss-20b"
 # Groq list prices for this model, USD per 1M tokens (input, output), checked when I ran it
 PRICE = (0.075, 0.30)
 PROMPT = ("Classify the customer support message into exactly one category: billing, delivery, "
-          "account or technical. Reply with the category word only.\n\nMessage: {text}")
+          "account or technical. Reply with the category word only.\n\n"
+          "Examples:\n{examples}\n\nMessage: {text}")
 
 
-def ask_groq(text, key):
+def few_shot_examples(n_per_label=2, seed=3):
+    """Two training messages per label. Taken from the training set, never from the test set."""
+    import random
+    rng = random.Random(seed)
+    rows = read_rows("data/train.json")
+    picked = []
+    for label in LABELS:
+        picked += rng.sample([r for r in rows if r["label"] == label], n_per_label)
+    return "\n".join(f"Message: {r['text']}\nCategory: {r['label']}" for r in picked)
+
+
+def ask_groq(text, key, examples):
     body = {"model": MODEL, "temperature": 0, "max_tokens": 300, "reasoning_effort": "low",
-            "messages": [{"role": "user", "content": PROMPT.format(text=text)}]}
+            "messages": [{"role": "user", "content": PROMPT.format(examples=examples, text=text)}]}
     req = urllib.request.Request("https://api.groq.com/openai/v1/chat/completions",
                                  data=json.dumps(body).encode(),
                                  headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json",
@@ -62,11 +75,12 @@ def main():
     key = os.environ.get("GROQ_API_KEY")
     if not fake and not key:
         sys.exit("Set GROQ_API_KEY, or run with --fake")
-    test = read_jsonl("data/test.jsonl")
+    test = read_rows("data/test.json")
+    examples = few_shot_examples()
     preds, tin, tout = [], 0, 0
     t0 = time.time()
     for r in test:
-        label, i, o = fake_model(r["text"]) if fake else ask_groq(r["text"], key)
+        label, i, o = fake_model(r["text"]) if fake else ask_groq(r["text"], key, examples)
         preds.append(label)
         tin, tout = tin + i, tout + o
     golds = [r["label"] for r in test]

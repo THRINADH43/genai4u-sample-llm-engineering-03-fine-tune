@@ -1,5 +1,5 @@
 """Builds the support-message dataset. Every message is written by me from the phrases below,
-so there are no licence questions. Steps: generate, clean (trim, collapse spaces, drop
+and I release the dataset under CC0 (public domain), so there are no licence questions. Steps: generate, clean (trim, collapse spaces, drop
 exact and case-insensitive duplicates and very short messages), shuffle with a fixed seed,
 then split by phrase (8/2/2 of the 12 phrases per label) into train/validation/test. The test file is written once and never read
 by the training code except for the final score."""
@@ -101,9 +101,8 @@ def split(rows):
 def main():
     parts = split(build())
     for name, rows in parts.items():
-        with open(Path(__file__).parent / f"{name}.jsonl", "w", encoding="utf-8") as f:
-            for r in rows:
-                f.write(json.dumps(r) + "\n")
+        with open(Path(__file__).parent / f"{name}.json", "w", encoding="utf-8") as f:
+            json.dump(rows, f, indent=1)
         counts = {label: sum(r["label"] == label for r in rows) for label in LABELS}
         print(f"{name}: {len(rows)} rows {counts}")
 

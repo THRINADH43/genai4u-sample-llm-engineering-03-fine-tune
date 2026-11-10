@@ -3,9 +3,9 @@ import json
 LABELS = ["billing", "delivery", "account", "technical"]
 
 
-def read_jsonl(path):
+def read_rows(path):
     with open(path, encoding="utf-8") as f:
-        return [json.loads(line) for line in f if line.strip()]
+        return json.load(f)
 
 
 def accuracy(preds, golds):

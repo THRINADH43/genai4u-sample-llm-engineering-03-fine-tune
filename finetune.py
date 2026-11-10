@@ -12,7 +12,7 @@ import numpy as np
 import torch
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
 
-from common import LABELS, accuracy, macro_f1, read_jsonl
+from common import LABELS, accuracy, macro_f1, read_rows
 
 MODEL = "prajjwal1/bert-tiny"
 SEED = 42
@@ -36,7 +36,7 @@ def predict(model, tok, texts, batch_size=64):
 
 def main(epochs=12, lr=5e-4, batch_size=16):
     set_seed(SEED)
-    train, val, test = (read_jsonl(f"data/{n}.jsonl") for n in ("train", "val", "test"))
+    train, val, test = (read_rows(f"data/{n}.json") for n in ("train", "val", "test"))
     tok = AutoTokenizer.from_pretrained(MODEL)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL, num_labels=len(LABELS))
     opt = torch.optim.AdamW(model.parameters(), lr=lr)

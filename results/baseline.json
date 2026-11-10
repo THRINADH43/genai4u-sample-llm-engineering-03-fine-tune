@@ -1,15 +1,25 @@
 {
  "model": "groq:openai/gpt-oss-20b",
  "test_size": 62,
- "test_accuracy": 0.9839,
- "test_macro_f1": 0.9793,
- "input_tokens": 6917,
- "output_tokens": 1820,
- "cost_usd": 0.00106,
- "seconds": 14.2,
+ "test_accuracy": 0.9516,
+ "test_macro_f1": 0.9345,
+ "input_tokens": 15535,
+ "output_tokens": 1494,
+ "cost_usd": 0.00161,
+ "seconds": 13.3,
  "errors": [
   {
-   "text": "Good morning, EMI option is not showing at checkout please help.",
+   "text": "EMI option is not showing at checkout this is the third time.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "Hi, EMI option is not showing at checkout kindly check.",
+   "gold": "billing",
+   "pred": "technical"
+  },
+  {
+   "text": "EMI option is not showing at checkout what should I do?",
    "gold": "billing",
    "pred": "technical"
   }
